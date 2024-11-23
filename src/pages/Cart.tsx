@@ -25,37 +25,44 @@ const Cart = () => {
         
         <div className="space-y-4">
           {state.items.map((item) => (
-            <div key={item.id} className="bg-white p-4 rounded-lg shadow-sm flex items-center gap-4">
-              <img src={item.image} alt={item.name} className="w-20 h-20 object-cover rounded" />
-              
-              <div className="flex-1">
-                <h3 className="font-semibold">{item.name}</h3>
-                <p className="text-gray-600">${item.price.toFixed(2)}</p>
-              </div>
+            <div key={item.id} className="bg-white p-4 rounded-lg shadow-sm">
+              <div className="flex flex-wrap items-center gap-4">
+                <img src={item.image} alt={item.name} className="w-20 h-20 object-cover rounded" />
+                
+                <div className="flex-1 min-w-[200px]">
+                  <h3 className="font-semibold">{item.name}</h3>
+                  <p className="text-gray-600">${item.price.toFixed(2)}</p>
+                </div>
 
-              <div className="flex items-center gap-2">
-                <Button
-                  variant="outline"
-                  size="icon"
-                  onClick={() => updateQuantity(item.id, Math.max(0, item.quantity - 1))}
-                >
-                  <Minus className="h-4 w-4" />
-                </Button>
-                <span className="w-8 text-center">{item.quantity}</span>
-                <Button
-                  variant="outline"
-                  size="icon"
-                  onClick={() => updateQuantity(item.id, item.quantity + 1)}
-                >
-                  <Plus className="h-4 w-4" />
-                </Button>
-                <Button
-                  variant="destructive"
-                  size="icon"
-                  onClick={() => removeFromCart(item.id)}
-                >
-                  <Trash2 className="h-4 w-4" />
-                </Button>
+                <div className="flex flex-wrap items-center gap-2">
+                  <div className="flex items-center">
+                    <Button
+                      variant="outline"
+                      size="icon"
+                      onClick={() => updateQuantity(item.id, Math.max(0, item.quantity - 1))}
+                      className="h-8 w-8"
+                    >
+                      <Minus className="h-4 w-4" />
+                    </Button>
+                    <span className="w-8 text-center">{item.quantity}</span>
+                    <Button
+                      variant="outline"
+                      size="icon"
+                      onClick={() => updateQuantity(item.id, item.quantity + 1)}
+                      className="h-8 w-8"
+                    >
+                      <Plus className="h-4 w-4" />
+                    </Button>
+                  </div>
+                  <Button
+                    variant="destructive"
+                    size="icon"
+                    onClick={() => removeFromCart(item.id)}
+                    className="h-8 w-8"
+                  >
+                    <Trash2 className="h-4 w-4" />
+                  </Button>
+                </div>
               </div>
             </div>
           ))}
