@@ -27,11 +27,15 @@ const Cart = () => {
           {state.items.map((item) => (
             <div key={item.id} className="bg-white p-4 rounded-lg shadow-sm">
               <div className="flex flex-wrap items-center gap-4">
-                <img src={item.image} alt={item.name} className="w-20 h-20 object-cover rounded" />
+                <img 
+                  src={(item.images?.[0] || item.image_url || '/placeholder.svg')}
+                  alt={item.name} 
+                  className="w-20 h-20 object-cover rounded" 
+                />
                 
                 <div className="flex-1 min-w-[200px]">
                   <h3 className="font-semibold">{item.name}</h3>
-                  <p className="text-gray-600">${item.price.toFixed(2)}</p>
+                  <p className="text-gray-600">{item.price.toFixed(2)} Frw</p>
                 </div>
 
                 <div className="flex flex-wrap items-center gap-2">

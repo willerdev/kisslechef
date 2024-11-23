@@ -171,7 +171,7 @@ const Plan = () => {
         <h1 className="text-2xl font-bold mb-6">Meal Plans</h1>
 
         <Card className="p-6 mb-8">
-          <h2 className="text-xl font-semibold mb-4">Create New Plan</h2>
+          <h2 className="text-xl font-semibold mb-4">Create New Plan for your lunch with KissleChef</h2>
           <div className="space-y-4">
             <div>
               <Label htmlFor="meal">Select Meal</Label>
@@ -182,7 +182,7 @@ const Plan = () => {
                 <SelectContent>
                   {meals.map((meal) => (
                     <SelectItem key={meal.id} value={meal.id}>
-                      {meal.name} - ${meal.price}
+                      {meal.name} - {meal.price.toFixed(2)} Frw
                     </SelectItem>
                   ))}
                 </SelectContent>

@@ -144,7 +144,9 @@ const Index = () => {
     <div className="min-h-screen bg-gradient-to-b from-sage-50 to-white">
       <header className="sticky top-0 z-50 bg-white/80 backdrop-blur-md border-b border-gray-100 shadow-sm">
         <div className="container mx-auto px-4 py-4 flex items-center justify-between">
-          <h1 className="text-2xl font-semibold text-sage-800 md:block">KissleChef</h1>
+        <h1 className="text-2xl font-semibold md:block">
+  Kiss<span className="text-red-600">le</span>Chef
+</h1>
           <div className="flex gap-4 items-center">
             {session ? (
               <>
@@ -201,6 +203,28 @@ const Index = () => {
               onChange={(e) => setSearchQuery(e.target.value)}
             />
             <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 text-gray-400" />
+          </div>
+        </section>
+
+        {/* Advertisement Section - Desktop */}
+        <section className="mb-12 hidden md:block">
+          <div className="rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300">
+            <img
+              src="https://i.imgur.com/vTyVRdW.jpeg"
+              alt="Special Offer"
+              className="w-full h-[300px] object-cover"
+            />
+          </div>
+        </section>
+
+        {/* Advertisement Section - Mobile */}
+        <section className="mb-6 md:hidden">
+          <div className="rounded-lg overflow-hidden shadow-md">
+            <img
+              src="https://i.imgur.com/vTyVRdW.jpeg"
+              alt="Special Offer"
+              className="w-full h-[200px] object-cover"
+            />
           </div>
         </section>
 

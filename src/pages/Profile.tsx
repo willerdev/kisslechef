@@ -307,7 +307,7 @@ const Profile = () => {
                           </p>
                         </div>
                         <div className="text-right">
-                          <p className="font-medium">${order.total.toFixed(2)}</p>
+                          <p className="font-medium">{order.total.toFixed(2)} Frw</p>
                           <span className="inline-block px-2 py-1 text-xs rounded bg-sage-100 text-sage-800">
                             {order.status}
                           </span>
@@ -347,7 +347,7 @@ const Profile = () => {
                       </p>
                       <div className="flex justify-between items-center">
                         <span className="text-2xl font-bold">
-                          ${currentPlan.price}/mo
+                          {currentPlan.price.toFixed(2)} Frw/mo
                         </span>
                         <Button onClick={() => navigate("/plan")} variant="outline">
                           Change Plan

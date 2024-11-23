@@ -114,7 +114,7 @@ const Favorites = () => {
             {favorites.map((favorite) => (
               <Card key={favorite.id} className="overflow-hidden">
                 <img
-                  src={favorite.product.image_url || "/placeholder.svg"}
+                  src={(favorite.product.images?.[0] || favorite.product.image_url || "/placeholder.svg")}
                   alt={favorite.product.name}
                   className="w-full h-32 md:h-48 object-cover"
                 />
@@ -131,7 +131,7 @@ const Favorites = () => {
                       className="flex-1"
                     >
                       <Heart className="h-4 w-4 mr-2 fill-current" />
-                      Remove
+                      
                     </Button>
                     <Button
                       size="sm"
