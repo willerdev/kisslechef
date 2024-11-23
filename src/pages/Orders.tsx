@@ -111,7 +111,7 @@ const Orders = () => {
                       <span className="px-2 py-1 text-sm rounded bg-sage-100 text-sage-800">
                         {order.status}
                       </span>
-                      <div className="mt-2 font-medium">${order.total.toFixed(2)}</div>
+                      <div className="mt-2 font-medium">{order.total.toFixed(2)} Frw</div>
                     </div>
                     <Button
                       variant="outline"
