@@ -8,7 +8,13 @@ const Footer = ({ className = "" }) => {
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           <div>
             <h3 className="text-lg font-semibold mb-4">KissleChef</h3>
-            <p className="text-gray-600">Your favorite food delivery service</p>
+            <div className="text-gray-600 space-y-2">
+              <p>Home/office delivery available</p>
+              <p>Best artistic experience in Kigali</p>
+              <p>Open: Monday - Saturday</p>
+              <p>9:00 AM - 9:30 PM</p>
+              <p>📍 Kimihurura KG 28Av gate no 11</p>
+            </div>
           </div>
           <div>
             <h4 className="font-semibold mb-4">Quick Links</h4>

@@ -280,7 +280,7 @@ const Index = () => {
                       onClick={() => handleAddToFavorite(product.id)}
                     >
                       <Heart className={`h-4 w-4 mr-2 ${favorites.includes(product.id) ? 'fill-current' : ''}`} />
-                      {favorites.includes(product.id) ? 'Saved' : 'Save'}
+                     
                     </Button>
                     <Button
                       className="flex-1 bg-sage-600 hover:bg-sage-700 text-sm md:text-base"
