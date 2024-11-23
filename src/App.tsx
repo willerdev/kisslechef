@@ -23,6 +23,7 @@ import MobileNav from "./components/MobileNav";
 import Plan from "./pages/Plan";
 import Favorites from "./pages/Favorites";
 import AdminLogin from "./pages/admin/Login";
+import AdminProducts from "./pages/admin/Products";
 import AdminDashboard from "./pages/admin/Dashboard";
 import AddProduct from "./pages/admin/AddProduct";
 import EditProduct from "./pages/admin/EditProduct";
@@ -172,6 +173,7 @@ const AppContent = () => {
                   />
                   <Route path="/admin/products/add" element={<AddProduct />} />
                   <Route path="/admin/products/edit/:id" element={<EditProduct />} />
+                  <Route path="/admin/products" element={<AdminProducts />} />
                 </Routes>
               </main>
               {isAdminRoute ? (

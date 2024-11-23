@@ -43,6 +43,21 @@ const AdminProducts = () => {
   const [error, setError] = useState<string | null>(null);
 
   useEffect(() => {
+    const checkAuth = async () => {
+      const { data: { user } } = await supabase.auth.getUser();
+      console.log('Current user:', user);
+      
+      if (user) {
+        const { data: adminData } = await supabase
+          .from('admins')
+          .select('*')
+          .eq('user_id', user.id)
+          .single();
+        console.log('Admin data:', adminData);
+      }
+    };
+    
+    checkAuth();
     loadProducts();
   }, []);
 
