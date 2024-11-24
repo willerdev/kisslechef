@@ -75,7 +75,7 @@ const Cart = () => {
         <div className="mt-8 bg-white p-4 rounded-lg shadow-sm">
           <div className="flex justify-between mb-4">
             <span className="font-semibold">Total:</span>
-            <span className="font-semibold">${state.total.toFixed(2)}</span>
+            <span className="font-semibold">{state.total.toFixed(2)} Frw</span>
           </div>
           <Button
             onClick={() => navigate("/checkout")}

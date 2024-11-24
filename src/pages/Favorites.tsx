@@ -121,7 +121,7 @@ const Favorites = () => {
                 <div className="p-4">
                   <h3 className="font-semibold mb-2">{favorite.product.name}</h3>
                   <p className="text-sage-600 font-medium mb-4">
-                    ${favorite.product.price.toFixed(2)}
+                    {favorite.product.price.toFixed(2)} Frw
                   </p>
                   <div className="flex gap-2">
                     <Button
