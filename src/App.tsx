@@ -85,9 +85,9 @@ const AppContent = () => {
                   <Route
                     path="/"
                     element={
-                      <PrivateRoute>
+                   
                         <Index />
-                      </PrivateRoute>
+                  
                     }
                   />
                   <Route
